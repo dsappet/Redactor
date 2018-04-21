@@ -5,6 +5,12 @@ var express        = require('express');
 var app            = express();
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
+var webpack = require('webpack');
+var webpackDevMiddleware = require('webpack-dev-middleware');
+
+// webpack middleware
+const config = require('./webpack.config.js');
+const compiler = webpack(config);
 
 // configuration ===========================================
 
@@ -34,6 +40,9 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 
 // set the static files location /public/img will be /img for users
 app.use(express.static(__dirname + '/public'));
+
+// Tell express to use our webpack middleware now
+app.use(webpackDevMiddleware(compiler, {publicPath:config.output.publicPath}));
 
 // routes ==================================================
 require('./server/routes')(app); // configure our routes
