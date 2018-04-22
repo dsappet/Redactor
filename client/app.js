@@ -9,6 +9,9 @@ import routing from './routes';
 // components
 import regexRedactor from './components/regexRedactor/regexRedactor.component';
 
+//services
+import regexRedactorService from './services/regexRedactorService/regexRedactorService';
+
 // styles
 import './app.css';
 
@@ -34,6 +37,7 @@ angular.module(MODULE_NAME, [uirouter])
     .directive('app', app) // dummy
     .controller('AppCtrl', AppCtrl) // dummy
     .component('regexRedactor', regexRedactor)
+    .service('regexRedactorService', regexRedactorService)
 ;
 
 export default MODULE_NAME;
