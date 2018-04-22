@@ -7,7 +7,7 @@
     "start": "node index",
     "dev": "webpack-dev-server --inline --progress",
     "build": "rimraf dist && webpack --bail --progress --profile",
-    "webpack" : "webpack"
+    "webpack": "webpack"
   },
   "keywords": [],
   "author": "Douglas Sappet",
@@ -42,9 +42,11 @@
     "node-libs-browser": "^0.5.2",
     "nodemon": "^1.17.3",
     "postcss-loader": "^0.5.1",
+    "prettier": "^1.12.1",
     "stats-webpack-plugin": "^0.1.2",
     "style-loader": "^0.12.3",
     "uglify-loader": "^1.2.0",
+    "underscore": "^1.9.0",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.15",
     "webpack-dev-middleware": "^3.1.2",

@@ -7,10 +7,11 @@ import appConfig from './app.config';
 import routing from './routes';
 
 // components
+import main from './components/main/main.component';
 import regexRedactor from './components/regexRedactor/regexRedactor.component';
 
 //services
-import regexRedactorService from './services/regexRedactorService/regexRedactorService';
+import replaceRedactorService from './services/replaceRedactorService/replaceRedactorService';
 
 // styles
 import './app.css';
@@ -36,8 +37,9 @@ angular.module(MODULE_NAME, [uirouter])
     .config(routing) // just need the one route config
     .directive('app', app) // dummy
     .controller('AppCtrl', AppCtrl) // dummy
+    .component('main', main)
     .component('regexRedactor', regexRedactor)
-    .service('regexRedactorService', regexRedactorService)
+    .service('replaceRedactorService', replaceRedactorService)
 ;
 
 export default MODULE_NAME;

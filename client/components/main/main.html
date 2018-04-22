@@ -1,0 +1,17 @@
+<div>
+<div>
+    input the text to redact:
+    <input ng-model="$ctrl.keys" />
+</div>
+    <div>
+    Input the top secret text:<br>
+    <textarea ng-model="$ctrl.inputText"></textarea>
+
+</div>
+
+    <br>
+    <br>
+
+    <regex-redactor input-text="$ctrl.inputText" phrases="$ctrl.keys"></regex-redactor>
+
+</div>
