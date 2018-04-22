@@ -1,10 +1,9 @@
-import angular from "angular";
-import _ from "underscore";
+import angular from "angular"; // for webpack's sake
 
 // The accepted convention previous to using ES6 syntax was that all services were factories
 // This is no longer practical with ES6 as classes map to angularjs services so use them! (sorry factories)
 
-// NOTE to keep these redactor services idempotent
+
 export default class keyPhraseService {
   static get $inject() {
     // angulars inject

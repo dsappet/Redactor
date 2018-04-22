@@ -11,7 +11,8 @@ import main from './components/main/main.component';
 import regexRedactor from './components/regexRedactor/regexRedactor.component';
 
 //services
-import replaceRedactorService from './services/replaceRedactorService/replaceRedactorService';
+import replaceRedactorService from './services/redactorServices/replaceRedactorService';
+import indexRedactorService from './services/redactorServices/indexRedactorService';
 import keyPhraseService from "./services/keyPhrasesService/keyPhraseService";
 
 // styles
@@ -42,7 +43,9 @@ angular.module(MODULE_NAME, [uirouter])
     .component('main', main)
     .component('regexRedactor', regexRedactor)
     .service('replaceRedactorService', replaceRedactorService)
-    .service('keyPhraseService', keyPhraseService);
+    .service('indexRedactorService', indexRedactorService)
+    .service('keyPhraseService', keyPhraseService)
+
 ;
 
 export default MODULE_NAME;
