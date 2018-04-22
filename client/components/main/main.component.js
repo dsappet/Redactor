@@ -12,13 +12,15 @@ export default {
             // I've seen a recommendation to inject like this when using components in ES6 style
             // some styles have this at the bottom but I prefer it at the top for readability
             static get $inject() {
-                return ['$log']; // keep it alphabetical
+                return ['$log', 'keyPhraseService']; // keep it alphabetical
             }
-            constructor($log) {
+            constructor($log,keyPhraseService) {
                 this.$log = $log;
+                this.keyPhraseService = keyPhraseService;
             }
             $onInit(){
                 this.title = 'TOP SECRET FILE REDACTORATORINATOR';
+                this.keys = '';
                 // preload some lorem ipsum
                 this.inputText = `
 
@@ -34,6 +36,9 @@ Vivamus tristique, felis nec iaculis bibendum, dui felis sagittis ipsum, at phar
 
             }
 
+            parse(){
+                this.$log.info(this.keyPhraseService.parse(this.keys));
+            }
 
 
         }

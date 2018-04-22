@@ -9,7 +9,7 @@ import _ from "underscore";
 export default class replaceRedactorService {
   static get $inject() {
     // angulars inject
-    return ["$q"];
+    return ['$q'];
   }
   constructor($q) {
     this.$q = $q;

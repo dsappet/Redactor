@@ -12,9 +12,11 @@ import regexRedactor from './components/regexRedactor/regexRedactor.component';
 
 //services
 import replaceRedactorService from './services/replaceRedactorService/replaceRedactorService';
+import keyPhraseService from "./services/keyPhrasesService/keyPhraseService";
 
 // styles
 import './app.css';
+
 
 let app = () => {
     return {
@@ -40,6 +42,7 @@ angular.module(MODULE_NAME, [uirouter])
     .component('main', main)
     .component('regexRedactor', regexRedactor)
     .service('replaceRedactorService', replaceRedactorService)
+    .service('keyPhraseService', keyPhraseService);
 ;
 
 export default MODULE_NAME;
