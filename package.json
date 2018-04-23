@@ -18,7 +18,8 @@
     "body-parser": "^1.18.2",
     "bootstrap": "^4.1.0",
     "express": "^4.16.3",
-    "method-override": "^2.3.10"
+    "method-override": "^2.3.10",
+    "webpack": "^4.6.0",
   },
   "devDependencies": {
     "autoprefixer": "^8.3.0",
@@ -51,7 +52,6 @@
     "uglify-loader": "^1.2.0",
     "underscore": "^1.9.0",
     "underscore.string": "^3.3.4",
-    "webpack": "^4.6.0",
     "webpack-cli": "^2.0.15",
     "webpack-dev-middleware": "^3.1.2",
     "webpack-dev-server": "^3.1.3",
