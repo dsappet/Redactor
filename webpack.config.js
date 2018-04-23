@@ -24,6 +24,26 @@ module.exports = {
                 } },
             { test: /\.css$/, loader: 'style-loader!css-loader' },
             { test: /\.sass$/, loaders: ['style-loader', 'css-loader', 'sass-loader'] },
+            {
+                test: /\.(scss)$/,
+                use: [{
+                    loader: 'style-loader', // inject CSS to page
+                }, {
+                    loader: 'css-loader', // translates CSS into CommonJS modules
+                }, {
+                    loader: 'postcss-loader', // Run post css actions
+                    options: {
+                        plugins: function () { // post css plugins, can be exported to postcss.config.js
+                            return [
+                                require('precss'),
+                                require('autoprefixer')
+                            ];
+                        }
+                    }
+                }, {
+                    loader: 'sass-loader' // compiles Sass to CSS
+                }]
+            },
             { test: /\.html$/, loader: 'raw-loader' },
             // inline base64 URLs for <=8k images, direct URLs for the rest
             { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },

@@ -1,6 +1,10 @@
+// THIS IS THE ENTRY POINT FOR WEBPACK
+
 // vendor stuff
 import angular from 'angular';
 import uirouter from '@uirouter/angularjs';
+//import bootstrap from 'bootstrap'; // don't need this right now, needs popper and jquery
+import './app.sass';
 
 // config stuff
 import appConfig from './app.config';
@@ -8,7 +12,6 @@ import routing from './routes';
 
 // components
 import main from './components/main/main.component';
-//import regexRedactor from './components/regexRedactor/regexRedactor.component';
 
 //services
 import indexRedactorService from './services/redactorServices/indexRedactorService';
@@ -25,7 +28,6 @@ angular
   .config(appConfig)
   .config(routing) // just need the one route config
   .component('main', main)
-  //  .component('regexRedactor', regexRedactor)
   .service('indexRedactorService', indexRedactorService)
   .service('keyPhraseService', keyPhraseService)
   .service('sampleTextService', sampleTextService);
