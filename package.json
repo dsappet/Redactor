@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "start": "node server.js",
     "dev": "webpack-dev-server --inline --progress",
     "build": "rimraf dist && webpack --bail --progress --profile",
     "webpack": "webpack"
