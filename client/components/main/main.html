@@ -2,10 +2,12 @@
 <div>
     input the text to redact:
     <input ng-model="$ctrl.keys" />
-    <button ng-click="$ctrl.parse()">Parse to console</button>
+
+    <label for="case">Case Sensitive? </label> <input name="case" type="checkbox" ng-model="$ctrl.caseSensitive" />
 </div>
     <div>
     Input the top secret text:<br>
+        <button ng-click="$ctrl.loadSampleText()">Load Sample Text</button>
     <textarea ng-model="$ctrl.inputText"></textarea>
 
 </div>
