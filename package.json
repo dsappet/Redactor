@@ -8,7 +8,8 @@
     "dev": "webpack-dev-server --inline --progress",
     "build": "rimraf dist && webpack --bail --progress --profile",
     "webpack": "webpack",
-    "test": "webpack" 
+    "test": "webpack",
+    "after_success": "yarn licenses list >> licenses.txt"
   },
   "keywords": [],
   "author": "Douglas Sappet",
