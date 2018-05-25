@@ -1,3 +1,4 @@
-/usr/bin/env bash
+/usr/bin/env sh
 
-yarn licenses list >> licenses.txt
+echo "executing license script"
+yarn licenses list 
